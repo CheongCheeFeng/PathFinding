@@ -1,0 +1,56 @@
+.node {
+  width: 25px;
+  height: 25px;
+  /* margin: -1px 0 0 -1px; */
+  border: 1px solid #000;
+  /* display: table-cell; */
+}
+
+.start-node {
+  background-image: url(../image/triangletwo-right.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.start-node:active {
+  animation-name: specialNodes;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  /* border: 1px solid rgb(0, 0, 0, 0); */
+}
+
+.target-node {
+  background-image: url(../image/circle.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.wall-node {
+  background-color: rgb(37, 31, 31);
+  /* margin: -1px 0 0 -1px; */
+  border: 1px solid rgb(37, 31, 31);
+}
+
+@keyframes specialNodes {
+  0% {
+    transform: scale(0.3);
+    /*background-color: darkslategrey;*/
+  }
+
+  50% {
+    transform: scale(1.2);
+    /*background-color: darkslategrey;*/
+  }
+
+  100% {
+    transform: scale(1);
+    /*background-color: darkslategrey;*/
+  }
+}
